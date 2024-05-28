@@ -44,4 +44,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: ExtentReports
-        path: target/ExtentReports_Both1.html
+        path: ./OpenWeatherMap/target/ExtentReports_Both1.html
