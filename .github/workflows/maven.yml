@@ -39,7 +39,7 @@ jobs:
       working-directory: ./OpenWeatherMap/
 
 
-    - name: Archive test reports
+    - name: Archive test report
       if: always()
       uses: actions/upload-artifact@v3
       with:
