@@ -1,9 +1,12 @@
 package Weather;
-import io.restassured.RestAssured;
-import io.restassured.response.Response;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentTest;
+
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
+import io.restassured.response.Response;
 
 public class OpenWeatherMap_API_PositiveTest extends OpenWeatherMap_Base
 {
@@ -13,32 +16,41 @@ public class OpenWeatherMap_API_PositiveTest extends OpenWeatherMap_Base
 	@Test
 	public void testWeatherByCity()
 	{
-		given()
+		ExtentTest extentTest = extent.createTest("HappyPath1Test1");
+        test.set(extentTest);
+        
+		Response response=given()
 		.queryParam("q","London")
 		.queryParam("appid",API_Key)
 	.when()
-		.get("/weather")
-	.then()
+		.get("/weather");
+	response.then()
 		.statusCode(200)
 		.body("name", equalTo("London"))
 		.body("cod", equalTo(200));
-		
+		//Assert.assertTrue(true);
+	 test.get().pass("Successfully retrieved weather for London");
+        
 	}
 	
 	@Test
 	public void testWeatherByCoordinate()
 	{
-
-		given()
+		ExtentTest extentTest = extent.createTest("HappyPath1Test2");
+        test.set(extentTest);
+Response response=given()
 			.queryParam("lat",44.34)
 			.queryParam("lon",10.99)
 			.queryParam("appid",API_Key)
 		.when()
-			.get("/weather")
-		.then()
+			.get("/weather");
+		response.then()
 			.statusCode(200)
 			.body("coord.lat", equalTo(44.34F))
 			.body("coord.lon", equalTo(10.99F));
+		//Assert.assertTrue(true);
+		 test.get().pass("Successfully retrieved weather for coordinates 35, 139");
+
 		
 	}
 }
