@@ -40,7 +40,7 @@ public class OpenWeatherMap_Base
 	public static void setup() 
 	{
 		RestAssured.baseURI="https://api.openweathermap.org/data/2.5";
-		ExtentSparkReporter spark = new ExtentSparkReporter("target/ExtentReports_Both1.html");
+		ExtentSparkReporter spark = new ExtentSparkReporter(".OpenWeatherMap/test-output/ExtentReports_Both1.html");
 		//ExtentSparkReporter spark1=new extent
         extent = new ExtentReports();
         extent.attachReporter(spark);
