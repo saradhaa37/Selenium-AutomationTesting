@@ -1,9 +1,13 @@
 package Weather;
-import io.restassured.RestAssured;
-import io.restassured.response.Response;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentTest;
+
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
+import io.restassured.response.Response;
+
 
 public class OpenWeatherMap_API_NegativeTest extends OpenWeatherMap_Base
 {
@@ -13,29 +17,38 @@ public class OpenWeatherMap_API_NegativeTest extends OpenWeatherMap_Base
 	@Test
 	public void testCityNotFound()
 	{
-		given()
+		ExtentTest extentTest = extent.createTest("HappyPath2Test1");
+        test.set(extentTest);
+
+	        Response response =given()
 		.queryParam("q","L")
 		.queryParam("appid",API_Key)
 	.when()
-		.get("/weather")
-	.then()
+		.get("/weather");
+	        
+	response.then()
 		.statusCode(404)
-		.body("message", equalTo("city not found"));		
+		.body("message", equalTo("city not found"));
+	//Assert.assertTrue(true);
+	 test.get().pass("Received 404 status code for city not found");
 	}
 	
 	@Test
 	public void testInvalidKey()
 	{
-
-		given()
+		ExtentTest extentTest = extent.createTest("HappyPath2Test2");
+        test.set(extentTest);
+Response response=given()
 			.queryParam("lat",44.34)
 			.queryParam("lon",10.99)
 			.queryParam("appid","Invalid")
 		.when()
-			.get("/weather")
-		.then()
+			.get("/weather");
+		response.then()
 			.statusCode(401)
 			.body("message", equalTo("Invalid API key. Please see https://openweathermap.org/faq#error401 for more info."));
-		
+		//Assert.assertTrue(true); 
+		test.get().pass("Received 401 status code with invalid API key");
+
 	}
 }
