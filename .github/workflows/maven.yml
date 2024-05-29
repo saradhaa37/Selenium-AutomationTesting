@@ -45,15 +45,10 @@ jobs:
       with:
         name: ExtentReports
         path: ./OpenWeatherMap/test-output/ExtentReports_Both1.html
-        
-    - name: Archive REST-Assured results
-      uses: actions/upload-artifact@v3
-      with:
-        name: REST-Assured-results
-        path: /target/ExtentReports_Both1.html
 
-    - name: Upload REST-Assured results to GitHub
-      uses: actions/upload-artifact@v3
+    - name: Download test report
+      uses: actions/download-artifact@v3
       with:
-        name: REST-Assured-results
-        path: /target/ExtentReports_Both1.html
+        name: ExtentReports
+        path: ./OpenWeatherMap/test-output/ExtentReports_Both1.html
+  
