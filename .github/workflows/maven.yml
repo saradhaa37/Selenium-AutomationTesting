@@ -20,7 +20,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '11'
-        distribution: 'temurin' # Specify the distribution here
+        distribution: 'temurin'
 
     - name: Cache Maven packages
       uses: actions/cache@v3
@@ -33,29 +33,23 @@ jobs:
       run: mvn clean install
       working-directory: ./OpenWeatherMap/
 
-
     - name: Run tests with Maven
       run: mvn test
       working-directory: ./OpenWeatherMap/
 
+    - name: List test-output directory for debugging
+      run: ls -la ./OpenWeatherMap/test-output/
 
     - name: Archive test report
       if: always()
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v3
       with:
         name: ExtentReports
         path: ./OpenWeatherMap/test-output/ExtentReports_Both1.html
 
-    - name: Download test report
-      uses: actions/download-artifact@v4
-      with:
-        name: ExtentReports
-        path: ./OpenWeatherMap/test-output/ExtentReports_29May24.html
-    
     - name: Save Report to Repository
       run: |
         mkdir -p saved-reports
-        cp ./OpenWeatherMap/test-output/ExtentReports_29May24.html saved-reports/
+        cp ./OpenWeatherMap/test-output/ExtentReports_Both1.html saved-reports/
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  
