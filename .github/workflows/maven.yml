@@ -50,5 +50,5 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: ExtentReports
-        path: ./OpenWeatherMap/test-output/ExtentReports_Both1.html
+        path: ./OpenWeatherMap/test-output/ExtentReports_29May24.html
   
