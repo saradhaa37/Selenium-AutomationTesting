@@ -1,6 +1,9 @@
 package utils;
 
 import io.restassured.RestAssured;
+
+import java.util.Map;
+
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import com.aventstack.extentreports.ExtentReports;
@@ -14,12 +17,15 @@ public class OpenWeatherMap_Base {
     protected static ExtentReports extent;
     public static ExtentSparkReporter htmlReporter;
     protected static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
-
+    protected static Map<String, String> testData;
+    
     @BeforeClass
     public static void setup() {
         String baseUrl = ConfigManager.getProperty("base.url");
         RestAssured.baseURI = baseUrl;
 
+        testData = DataLoader.loadTestData();
+        
         ExtentSparkReporter spark = new ExtentSparkReporter("test-output/ExtentReports_Both1.html");
         extent = new ExtentReports();
         extent.attachReporter(spark);

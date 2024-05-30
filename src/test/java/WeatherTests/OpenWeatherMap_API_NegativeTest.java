@@ -15,12 +15,14 @@ import java.util.Map;
 
 public class OpenWeatherMap_API_NegativeTest extends OpenWeatherMap_Base {
 
+	
+	
     @Test
     public void testInvalidCityWeather() {
-    	ExtentTest extentTest = extent.createTest("HappyPath2Test1");
+    	ExtentTest extentTest = extent.createTest("Unhappypath");
         test.set(extentTest);
         Map<String, String> params = new HashMap<>();
-        params.put("q", "InvalidCityName");
+        params.put("q", testData.get("invalidCity"));
         params.put("appid", ConfigManager.getProperty("api.key"));
 
         Response response = ApiUtils.getRequest("/weather", params);
