@@ -1,6 +1,6 @@
 **Prerequisite:**
 
-->Maven installation
+->Maven installation.
 
 ->Java installation
 
