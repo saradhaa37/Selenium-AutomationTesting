@@ -31,25 +31,23 @@ jobs:
 
     - name: Build with Maven
       run: mvn clean install
-      working-directory: ./OpenWeatherMap
 
     - name: Run tests with Maven
       run: mvn test
-      working-directory: ./OpenWeatherMap
 
     - name: List test-output directory for debugging
-      run: ls -la ./OpenWeatherMap/test-output/
+      run: ls -la ./test-output/
 
     - name: Archive test report
       if: always()
       uses: actions/upload-artifact@v3
       with:
         name: ExtentReports
-        path: ./OpenWeatherMap/test-output/ExtentReports_Both1.html
+        path: ./test-output/ExtentReports_Both1.html
 
     - name: Save Report to Repository
       run: |
         mkdir -p saved-reports
-        cp ./OpenWeatherMap/test-output/ExtentReports_Both1.html saved-reports/
+        cp ./test-output/ExtentReports_Both1.html saved-reports/
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
