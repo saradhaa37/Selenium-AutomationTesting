@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes" thread-count="2">
+	 <test name="Test">
+	    <classes>
+			<class name="Weather.OpenWeatherMap_API_NegativeTest"/>
+	      <class name="Weather.OpenWeatherMap_API_PositiveTest"/>
+	      
+	     <!-- <class name="Weather.TestWeather"/>-->
+	    </classes>
+	  </test> <!-- Test -->
+</suite> <!-- Suite -->
