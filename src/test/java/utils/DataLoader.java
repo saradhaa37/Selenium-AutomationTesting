@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class DataLoader {
 
-    private static final String DATA_PATH = "src/main/resources/data/weatherData.json";
+    private static final String DATA_PATH = "src/main/resources/Data/weatherData.json";
 
     public static Map<String, String> loadTestData() {
         ObjectMapper objectMapper = new ObjectMapper();
