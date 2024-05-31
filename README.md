@@ -1,16 +1,19 @@
 **Selenium-RESTASSURED-ExtentReport Framework for Openweather App Automation Testing**
 
 ## Table of Contents
--[Application overview](#OpenWeatherAPI)
-
--[Microservices Covered]#Microservices Covered
+-[Application overview](#openweatherapi)
 
 
-**OpenWeatherAPI:**
+-[Microservices Covered](#microservices-covered)
+
+
+-[Reports](#reports)
+
+## OpenWeatherAPI:
 Using Openweather App we can get essential weather data, short-term and long-term forecasts and aggregated weather. One Call API 3.0 is based on the proprietary OpenWeather Model and is updated every 10 minutes
 Link--> https://openweathermap.org/api/one-call-3
 
-**Microservices Covered**
+## Microservices Covered
 Weather Retrieval: Tests related to retrieving weather data for given cities using the OpenWeatherMap API
 
 **Test Suite**
@@ -47,7 +50,7 @@ Negative Tests: Verify the API's behavior under invalid conditions.
 
 ->provide the ssh code and finish import
 
-**Reports:**
+## Reports:
 Once the test is executed successfully in local report will be created under test-output folder => test-output/ExtentReports_All.html
 
 Once the test is completed in github action , report will be generated under respective job summary page like below
