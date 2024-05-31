@@ -1,6 +1,9 @@
 {
   "validCity": "London",
   "invalidCity": "InvalidCity1",
-  "validApiKey": "your_valid_api_key",
-  "invalidApiKey": "invalid_api_key"
+  "invalidApiKey": "invalid_api_key",
+  "validLat": "51.51",
+  "validLon": "-0.13",
+  "validCityId": "2172797",
+  "specialCharacterCity": "@!#$"
 }

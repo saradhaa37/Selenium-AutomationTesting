@@ -26,7 +26,7 @@ public class OpenWeatherMap_Base {
 
         testData = DataLoader.loadTestData();
         
-        ExtentSparkReporter spark = new ExtentSparkReporter("test-output/ExtentReports_Both1.html");
+        ExtentSparkReporter spark = new ExtentSparkReporter("test-output/ExtentReports_All.html");
         extent = new ExtentReports();
         extent.attachReporter(spark);
     }
