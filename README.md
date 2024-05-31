@@ -1,4 +1,9 @@
-Selenium-RESTASSURED-ExtentReport Framework for Openweather App
+Selenium-RESTASSURED-ExtentReport Framework for Openweather App Automation Testing
+
+**OpenWeatherAPI:**
+Using Openweather App we can get essential weather data, short-term and long-term forecasts and aggregated weather. One Call API 3.0 is based on the proprietary OpenWeather Model and is updated every 10 minutes
+Link--> https://openweathermap.org/api/one-call-3
+
 
 **Prerequisite:**
 
