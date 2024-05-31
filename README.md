@@ -2,9 +2,9 @@ Selenium-RESTASSURED-ExtentReport Framework for Openweather App
 
 **Prerequisite:**
 
-->Maven installation.
+->Maven installation- https://maven.apache.org/install.html
 
-->Java installation
+->Java installation- https://www.java.com/en/download/help/download_options.html
 
 **To step up this project using eclipse:**
 
