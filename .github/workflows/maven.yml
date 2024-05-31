@@ -48,6 +48,6 @@ jobs:
     - name: Save Report to Repository
       run: |
         mkdir -p saved-reports
-        cp ./test-output/ExtentReports_Both1.html saved-reports/
+        cp ./test-output/ExtentReports_All.html saved-reports/
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
