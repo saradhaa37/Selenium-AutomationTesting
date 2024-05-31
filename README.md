@@ -10,6 +10,7 @@
 -[How to run this project](#how-to-run-this-project)
     -[Prerequisite](#prerequisite)
     -[Commandline test execution in local](#commandline-test-execution-in-local)
+    -[How to set up this project in eclipse](#how-to-set-up-this-project-in-eclipse)
 
 -[Reports](#reports)
 
@@ -18,7 +19,7 @@ Using Openweather App we can get essential weather data, short-term and long-ter
 Link--> https://openweathermap.org/api/one-call-3
 
 ## Microservices Covered
-Weather Retrieval: Tests related to retrieving weather data for given cities using the OpenWeatherMap API
+Weather Retrieval: Tests related to retrieving weather data using the OpenWeatherMap API
 
 ## About Test Suite
 The test suite is divided into the following categories:
@@ -51,7 +52,7 @@ The test suite is divided into the following categories:
     mvn clean install
     mvn test
 
-**To step up this project using eclipse:**
+### How to set up this project in eclipse
 
 ->Import projetc->smart import
 
