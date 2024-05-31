@@ -1,11 +1,15 @@
-**Selenium-RESTASSURED-ExtentReport Framework for Openweather App Automation Testing**
+# Selenium-RESTASSURED-ExtentReport Framework for Openweather App Automation Testing
 
 ## Table of Contents
 -[Application overview](#openweatherapi)
 
-
 -[Microservices Covered](#microservices-covered)
 
+-[About Test Suite](#about-test-suite)
+
+-[How to run this project](#how-to-run-this-project)
+    -[Prerequisite](#prerequisite)
+    -[Commandline test execution in local](#commandline-test-execution-in-local)
 
 -[Reports](#reports)
 
@@ -16,13 +20,16 @@ Link--> https://openweathermap.org/api/one-call-3
 ## Microservices Covered
 Weather Retrieval: Tests related to retrieving weather data for given cities using the OpenWeatherMap API
 
-**Test Suite**
+## About Test Suite
 The test suite is divided into the following categories:
 
 Positive Tests: Verify the correct functionality of the API under valid conditions.
 Negative Tests: Verify the API's behavior under invalid conditions.
 
-**Prerequisite:**
+## How to run this project
+The test suite is divided into the following categories:
+
+### Prerequisite
 
 ->Maven installation- https://maven.apache.org/install.html
 
@@ -30,7 +37,7 @@ Negative Tests: Verify the API's behavior under invalid conditions.
 
 -->Git installation- https://github.com/git-guides/install-git
 
-**Commandline Execution details in local**
+### Commandline test execution in local
     
     1. Clone the Repository
     git clone https://github.com/saradhaa37/Chip-AutomationTesting.git
