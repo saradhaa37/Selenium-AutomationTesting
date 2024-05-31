@@ -43,7 +43,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: ExtentReports
-        path: ./test-output/ExtentReports_Both1.html
+        path: ./test-output/ExtentReports_All.html
 
     - name: Save Report to Repository
       run: |
