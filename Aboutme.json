@@ -1,0 +1,67 @@
+{
+    "personalDetails": {
+        "firstName": "Saradhaa",
+        "lastName": "Gurusamy",
+        "age": 31,
+        "mobileNumber": "7448014669",
+        "nationality": "Indian",
+        "address": "Coulsdon, London"
+    },
+    "aboutMe": {
+        "Hobbies": [
+            "Gardening",
+            "Explore new places"
+        ],
+        "Favourite_Quote": "Keep it simple, Stay positive."
+    },
+    "educationDetails": [
+        {
+            "schoolName": "SLM School",
+            "location": "Chennai",
+            "subject": "Matric",
+            "percentage": "86%"
+        },
+        {
+            "Collage": "Anna University",
+            "location": "Chennai",
+            "subject": "Matric",
+            "percentage": "75%"
+        }
+    ],
+    "professionalExperience": [
+        {
+            "companyName": "nate, E-Commerce start up",
+            "Location": "London",
+            "skills": [
+                "Automation Testing",
+                "Performance testing",
+                "JMeter",
+                "Python"
+            ]
+        },
+        {
+            "companyName": "diconium",
+            "Location": "Germany",
+            "skills": [
+                "BDD",
+                "Git",
+                "CloudFoundry",
+                "Azure"
+            ]
+        }
+    ],
+    "socialPresence": [
+        {
+            "platformName": "LinkedIn",
+            "url": "https://www.linkedin.com/in/saradhaa-gurusamy-16235611a/"
+        },
+        {
+            "platformName": "Github",
+            "url": "https://github.com/saradhaa37/"
+        }
+    ],
+    "certifications": [
+        "ISTQB",
+        "SFDC Admin"
+    ]
+}
